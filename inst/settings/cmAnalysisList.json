@@ -15,10 +15,10 @@
         "ConditionOccurrenceLongTerm": false,
         "DrugEraStartLongTerm": false,
         "VisitCountShortTerm": false,
-        "Chads2Vasc": true,
+        "Chads2Vasc": false,
         "ConditionGroupEraStartLongTerm": false,
         "ConditionEraShortTerm": false,
-        "Dcsi": true,
+        "Dcsi": false,
         "DrugGroupEraLongTerm": true,
         "DrugGroupEraShortTerm": true,
         "ConditionEraStartLongTerm": false,
@@ -72,7 +72,7 @@
         "DistinctObservationCountLongTerm": false,
         "ProcedureOccurrenceMediumTerm": false,
         "attr_class": "covariateSettings",
-        "CharlsonIndex": true,
+        "CharlsonIndex": false,
         "DemographicsPriorObservationTime": false,
         "MeasurementShortTerm": true,
         "DistinctProcedureCountMediumTerm": false,
@@ -93,7 +93,7 @@
         "ProcedureOccurrenceShortTerm": true,
         "ObservationMediumTerm": false,
         "ConditionGroupEraAnyTimePrior": false,
-        "Chads2": true,
+        "Chads2": false,
         "DrugExposureAnyTimePrior": false,
         "DeviceExposureLongTerm": true,
         "DemographicsTimeInCohort": false,
@@ -226,7 +226,7 @@
       },
       "attr_class": "args",
       "includeCovariateIds": [],
-      "maxCohortSizeForFitting": 250000
+      "maxCohortSizeForFitting": 100000
     },
     "trimByPsToEquipoiseArgs": {
       "bounds": [
@@ -297,10 +297,10 @@
         "ConditionOccurrenceLongTerm": false,
         "DrugEraStartLongTerm": false,
         "VisitCountShortTerm": false,
-        "Chads2Vasc": true,
+        "Chads2Vasc": false,
         "ConditionGroupEraStartLongTerm": false,
         "ConditionEraShortTerm": false,
-        "Dcsi": true,
+        "Dcsi": false,
         "DrugGroupEraLongTerm": true,
         "DrugGroupEraShortTerm": true,
         "ConditionEraStartLongTerm": false,
@@ -354,7 +354,7 @@
         "DistinctObservationCountLongTerm": false,
         "ProcedureOccurrenceMediumTerm": false,
         "attr_class": "covariateSettings",
-        "CharlsonIndex": true,
+        "CharlsonIndex": false,
         "DemographicsPriorObservationTime": false,
         "MeasurementShortTerm": true,
         "DistinctProcedureCountMediumTerm": false,
@@ -375,7 +375,7 @@
         "ProcedureOccurrenceShortTerm": true,
         "ObservationMediumTerm": false,
         "ConditionGroupEraAnyTimePrior": false,
-        "Chads2": true,
+        "Chads2": false,
         "DrugExposureAnyTimePrior": false,
         "DeviceExposureLongTerm": true,
         "DemographicsTimeInCohort": false,
@@ -508,7 +508,7 @@
       },
       "attr_class": "args",
       "includeCovariateIds": [],
-      "maxCohortSizeForFitting": 250000
+      "maxCohortSizeForFitting": 100000
     },
     "trimByPsToEquipoiseArgs": {
       "bounds": [
@@ -579,10 +579,10 @@
         "ConditionOccurrenceLongTerm": false,
         "DrugEraStartLongTerm": false,
         "VisitCountShortTerm": false,
-        "Chads2Vasc": true,
+        "Chads2Vasc": false,
         "ConditionGroupEraStartLongTerm": false,
         "ConditionEraShortTerm": false,
-        "Dcsi": true,
+        "Dcsi": false,
         "DrugGroupEraLongTerm": true,
         "DrugGroupEraShortTerm": true,
         "ConditionEraStartLongTerm": false,
@@ -636,7 +636,7 @@
         "DistinctObservationCountLongTerm": false,
         "ProcedureOccurrenceMediumTerm": false,
         "attr_class": "covariateSettings",
-        "CharlsonIndex": true,
+        "CharlsonIndex": false,
         "DemographicsPriorObservationTime": false,
         "MeasurementShortTerm": true,
         "DistinctProcedureCountMediumTerm": false,
@@ -657,7 +657,7 @@
         "ProcedureOccurrenceShortTerm": true,
         "ObservationMediumTerm": false,
         "ConditionGroupEraAnyTimePrior": false,
-        "Chads2": true,
+        "Chads2": false,
         "DrugExposureAnyTimePrior": false,
         "DeviceExposureLongTerm": true,
         "DemographicsTimeInCohort": false,
@@ -790,7 +790,7 @@
       },
       "attr_class": "args",
       "includeCovariateIds": [],
-      "maxCohortSizeForFitting": 250000
+      "maxCohortSizeForFitting": 100000
     },
     "trimByPsToEquipoiseArgs": {
       "bounds": [
