@@ -1,0 +1,10 @@
+atlasId,atlasName,cohortId,name
+1501,[CoxibVsNSAIDs]Treatment,1501,CoxibVsNSAIDsTreatment
+1502,[CoxibVsNSAIDs]Comparator,1502,CoxibVsNSAIDsComparator
+1503,[CoxibVsNSAIDs]AcuteRenalFailure,1503,CoxibVsNSAIDsAcuteRenalFailure
+1504,[CoxibVsNSAIDs]Angioedema,1504,CoxibVsNSAIDsAngioedema
+1505,[CoxibVsNSAIDs]DrugInducedLiverInjury,1505,CoxibVsNSAIDsDrugInducedLiverInjury
+1506,[CoxibVsNSAIDs]GiHemorrhage,1506,CoxibVsNSAIDsGiHemorrhage
+1507,[CoxibVsNSAIDs]HeartFailure,1507,CoxibVsNSAIDsHeartFailure
+1508,[CoxibVsNSAIDs]MiAndIschemicDeath,1508,CoxibVsNSAIDsMiAndIschemicDeath
+1509,[CoxibVsNSAIDs]MyocardialInfarction,1509,CoxibVsNSAIDsMyocardialInfarction

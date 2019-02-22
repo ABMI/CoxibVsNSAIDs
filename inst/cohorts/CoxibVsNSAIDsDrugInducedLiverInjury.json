@@ -1,0 +1,373 @@
+{
+  "ExpressionLimit": {"Type": "First"},
+  "CollapseSettings": {
+    "CollapseType": "ERA",
+    "EraPad": 0
+  },
+  "CensorWindow": {
+    "StartDate": null,
+    "EndDate": null
+  },
+  "ConceptSets": [
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Unknown",
+            "CONCEPT_ID": 40796722,
+            "STANDARD_CONCEPT": null,
+            "CONCEPT_CODE": "LP44699-4",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Alanine Aminotransferase | Bld-Ser-Plas",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Unknown",
+            "CONCEPT_CLASS_ID": null,
+            "INVALID_REASON": null
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Unknown",
+            "CONCEPT_ID": 40787003,
+            "STANDARD_CONCEPT": null,
+            "CONCEPT_CODE": "LP45656-3",
+            "VOCABULARY_ID": "LOINC",
+            "CONCEPT_NAME": "Aspartate Aminotransferase | Bld-Ser-Plas",
+            "DOMAIN_ID": "Measurement",
+            "STANDARD_CONCEPT_CAPTION": "Unknown",
+            "CONCEPT_CLASS_ID": null,
+            "INVALID_REASON": null
+          },
+          "includeMapped": false,
+          "includeDescendants": true
+        }
+      ]},
+      "name": "aminotransferase",
+      "id": 0
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 40796605,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "LP43561-7",
+          "VOCABULARY_ID": "LOINC",
+          "CONCEPT_NAME": "Bilirubin | Bld-Ser-Plas",
+          "DOMAIN_ID": "Measurement",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "bilirubin",
+      "id": 1
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 40777013,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "LP45609-2",
+          "VOCABULARY_ID": "LOINC",
+          "CONCEPT_NAME": "Alkaline Phosphatase | Bld-Ser-Plas",
+          "DOMAIN_ID": "Measurement",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "Alkaline phosphatase",
+      "id": 2
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 194087,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "235862008",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Hepatitis due to infection",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "viral hepatitis",
+      "id": 3
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 4352876,
+          "STANDARD_CONCEPT": null,
+          "CONCEPT_CODE": "243978007",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "Liver damage",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Unknown",
+          "CONCEPT_CLASS_ID": null,
+          "INVALID_REASON": null
+        },
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
+      "name": "liver damage",
+      "id": 4
+    }
+  ],
+  "EndStrategy": null,
+  "CensoringCriteria": [],
+  "Title": null,
+  "AdditionalCriteria": {
+    "CriteriaList": [
+      {
+        "RestrictVisit": false,
+        "StartWindow": {
+          "UseEventEnd": false,
+          "Start": {
+            "Days": 30,
+            "Coeff": -1
+          },
+          "End": {
+            "Days": 30,
+            "Coeff": 1
+          },
+          "UseIndexEnd": null
+        },
+        "EndWindow": null,
+        "Criteria": {"Measurement": {
+          "Operator": null,
+          "RangeHigh": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 0
+          },
+          "MeasurementTypeExclude": false,
+          "ValueAsConcept": null,
+          "CorrelatedCriteria": null,
+          "RangeHighRatio": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 2
+          },
+          "CodesetId": 1,
+          "ProviderSpecialty": null,
+          "Gender": null,
+          "Unit": null,
+          "RangeLowRatio": null,
+          "MeasurementType": null,
+          "MeasurementSourceConcept": null,
+          "VisitType": null,
+          "ValueAsNumber": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 0
+          },
+          "First": null,
+          "OccurrenceStartDate": null,
+          "RangeLow": null,
+          "Abnormal": null,
+          "Age": null
+        }},
+        "Occurrence": {
+          "Type": 2,
+          "IsDistinct": false,
+          "Count": 1
+        }
+      },
+      {
+        "RestrictVisit": false,
+        "StartWindow": {
+          "UseEventEnd": false,
+          "Start": {
+            "Days": null,
+            "Coeff": -1
+          },
+          "End": {
+            "Days": 30,
+            "Coeff": 1
+          },
+          "UseIndexEnd": null
+        },
+        "EndWindow": null,
+        "Criteria": {"ConditionOccurrence": {
+          "OccurrenceEndDate": null,
+          "CorrelatedCriteria": null,
+          "ConditionTypeExclude": false,
+          "CodesetId": 3,
+          "ProviderSpecialty": null,
+          "Gender": null,
+          "VisitType": null,
+          "First": null,
+          "OccurrenceStartDate": null,
+          "ConditionType": null,
+          "ConditionSourceConcept": null,
+          "StopReason": null,
+          "Age": null
+        }},
+        "Occurrence": {
+          "Type": 1,
+          "IsDistinct": false,
+          "Count": 0
+        }
+      },
+      {
+        "RestrictVisit": false,
+        "StartWindow": {
+          "UseEventEnd": false,
+          "Start": {
+            "Days": null,
+            "Coeff": -1
+          },
+          "End": {
+            "Days": 30,
+            "Coeff": 1
+          },
+          "UseIndexEnd": null
+        },
+        "EndWindow": null,
+        "Criteria": {"Measurement": {
+          "Operator": null,
+          "RangeHigh": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 0
+          },
+          "MeasurementTypeExclude": false,
+          "ValueAsConcept": null,
+          "CorrelatedCriteria": null,
+          "RangeHighRatio": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 2
+          },
+          "CodesetId": 2,
+          "ProviderSpecialty": null,
+          "Gender": null,
+          "Unit": null,
+          "RangeLowRatio": null,
+          "MeasurementType": null,
+          "MeasurementSourceConcept": null,
+          "VisitType": null,
+          "ValueAsNumber": {
+            "Op": "gt",
+            "Extent": null,
+            "Value": 0
+          },
+          "First": null,
+          "OccurrenceStartDate": null,
+          "RangeLow": null,
+          "Abnormal": null,
+          "Age": null
+        }},
+        "Occurrence": {
+          "Type": 1,
+          "IsDistinct": false,
+          "Count": 0
+        }
+      },
+      {
+        "RestrictVisit": false,
+        "StartWindow": {
+          "UseEventEnd": false,
+          "Start": {
+            "Days": null,
+            "Coeff": -1
+          },
+          "End": {
+            "Days": 1,
+            "Coeff": -1
+          },
+          "UseIndexEnd": null
+        },
+        "EndWindow": null,
+        "Criteria": {"ConditionOccurrence": {
+          "OccurrenceEndDate": null,
+          "CorrelatedCriteria": null,
+          "ConditionTypeExclude": false,
+          "CodesetId": 4,
+          "ProviderSpecialty": null,
+          "Gender": null,
+          "VisitType": null,
+          "First": null,
+          "OccurrenceStartDate": null,
+          "ConditionType": null,
+          "ConditionSourceConcept": null,
+          "StopReason": null,
+          "Age": null
+        }},
+        "Occurrence": {
+          "Type": 1,
+          "IsDistinct": false,
+          "Count": 0
+        }
+      }
+    ],
+    "Type": "ALL",
+    "DemographicCriteriaList": [],
+    "Groups": [],
+    "Count": null
+  },
+  "QualifiedLimit": {"Type": "First"},
+  "InclusionRules": [],
+  "PrimaryCriteria": {
+    "CriteriaList": [{"Measurement": {
+      "Operator": null,
+      "RangeHigh": {
+        "Op": "gt",
+        "Extent": null,
+        "Value": 0
+      },
+      "MeasurementTypeExclude": false,
+      "ValueAsConcept": null,
+      "CorrelatedCriteria": null,
+      "RangeHighRatio": {
+        "Op": "gt",
+        "Extent": null,
+        "Value": 3
+      },
+      "CodesetId": 0,
+      "ProviderSpecialty": null,
+      "Gender": null,
+      "Unit": null,
+      "RangeLowRatio": null,
+      "MeasurementType": null,
+      "MeasurementSourceConcept": null,
+      "VisitType": null,
+      "ValueAsNumber": {
+        "Op": "gt",
+        "Extent": null,
+        "Value": 0
+      },
+      "First": null,
+      "OccurrenceStartDate": null,
+      "RangeLow": null,
+      "Abnormal": null,
+      "Age": null
+    }}],
+    "PrimaryCriteriaLimit": {"Type": "All"},
+    "ObservationWindow": {
+      "PostDays": 0,
+      "PriorDays": 0
+    }
+  }
+}

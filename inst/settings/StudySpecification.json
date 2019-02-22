@@ -1,0 +1,3424 @@
+{
+  "skeletonType": "ComparativeEffectStudy",
+  "positiveControlSynthesisArgs": {
+    "outputIdOffset": 10000,
+    "precision": 0.01,
+    "riskWindowStart": 0,
+    "control": {
+      "maxIterations": 1000,
+      "autoSearch": true,
+      "seed": null,
+      "initialBound": 2,
+      "gridSteps": 10,
+      "threads": 1,
+      "startingVariance": -1,
+      "useKKTSwindle": false,
+      "lowerLimit": 0.01,
+      "cvRepetitions": 1,
+      "attr_class": "cyclopsControl",
+      "noiseLevel": "quiet",
+      "fold": 10,
+      "minCVData": 100,
+      "resetCoefficients": false,
+      "upperLimit": 20,
+      "cvType": "auto",
+      "selectorType": "auto",
+      "convergenceType": "gradient",
+      "tuneSwindle": 10,
+      "maxBoundCount": 5,
+      "tolerance": 1.0E-6,
+      "algorithm": "ccd"
+    },
+    "washoutPeriod": 183,
+    "modelType": "survival",
+    "addExposureDaysToEnd": true,
+    "minOutcomeCountForModel": 50,
+    "firstOutcomeOnly": true,
+    "maxSubjectsForModel": 250000,
+    "minOutcomeCountForInjection": 25,
+    "prior": {
+      "variance": 1,
+      "useCrossValidation": true,
+      "priorType": "laplace",
+      "exclude": 0,
+      "neighborhood": null,
+      "attr_class": "cyclopsPrior",
+      "forceIntercept": false,
+      "graph": null
+    },
+    "effectSizes": [
+      1.5,
+      2,
+      4
+    ],
+    "covariateSettings": {
+      "VisitCountMediumTerm": false,
+      "ObservationShortTerm": true,
+      "shortTermStartDays": -30,
+      "MeasurementRangeGroupShortTerm": false,
+      "ConditionOccurrenceLongTerm": false,
+      "DrugEraStartLongTerm": false,
+      "VisitCountShortTerm": false,
+      "Chads2Vasc": true,
+      "ConditionGroupEraStartLongTerm": false,
+      "ConditionEraShortTerm": false,
+      "Dcsi": true,
+      "DrugGroupEraLongTerm": true,
+      "DrugGroupEraShortTerm": true,
+      "ConditionEraStartLongTerm": false,
+      "temporal": false,
+      "DemographicsIndexMonth": true,
+      "ConditionOccurrencePrimaryInpatientLongTerm": false,
+      "ConditionEraAnyTimePrior": false,
+      "addDescendantsToInclude": false,
+      "ConditionGroupEraStartMediumTerm": false,
+      "ProcedureOccurrenceLongTerm": true,
+      "DrugExposureLongTerm": false,
+      "DrugEraStartShortTerm": false,
+      "DistinctIngredientCountMediumTerm": false,
+      "DistinctMeasurementCountShortTerm": false,
+      "MeasurementRangeGroupLongTerm": true,
+      "ConditionGroupEraOverlapping": false,
+      "attr_fun": "getDbDefaultCovariateData",
+      "MeasurementRangeGroupMediumTerm": false,
+      "DrugGroupEraStartMediumTerm": false,
+      "MeasurementAnyTimePrior": false,
+      "MeasurementMediumTerm": false,
+      "includedCovariateIds": [],
+      "ConditionOccurrenceAnyTimePrior": false,
+      "DistinctConditionCountLongTerm": false,
+      "MeasurementValueLongTerm": false,
+      "DrugEraShortTerm": false,
+      "DrugGroupEraAnyTimePrior": false,
+      "DrugEraOverlapping": false,
+      "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+      "ConditionEraMediumTerm": false,
+      "ConditionEraOverlapping": false,
+      "ConditionEraStartShortTerm": false,
+      "ObservationAnyTimePrior": false,
+      "VisitConceptCountShortTerm": false,
+      "DemographicsEthnicity": true,
+      "DistinctIngredientCountLongTerm": false,
+      "ConditionOccurrencePrimaryInpatientShortTerm": false,
+      "DemographicsAgeGroup": true,
+      "DistinctProcedureCountShortTerm": false,
+      "DistinctObservationCountMediumTerm": false,
+      "includedCovariateConceptIds": [],
+      "DrugGroupEraStartShortTerm": false,
+      "addDescendantsToExclude": false,
+      "DrugEraLongTerm": false,
+      "DistinctConditionCountShortTerm": false,
+      "ConditionGroupEraShortTerm": true,
+      "ConditionEraStartMediumTerm": false,
+      "VisitCountLongTerm": false,
+      "DemographicsRace": true,
+      "ProcedureOccurrenceAnyTimePrior": false,
+      "DistinctObservationCountLongTerm": false,
+      "ProcedureOccurrenceMediumTerm": false,
+      "attr_class": "covariateSettings",
+      "CharlsonIndex": true,
+      "DemographicsPriorObservationTime": false,
+      "MeasurementShortTerm": true,
+      "DistinctProcedureCountMediumTerm": false,
+      "ConditionEraLongTerm": false,
+      "DrugGroupEraStartLongTerm": false,
+      "DemographicsGender": true,
+      "DeviceExposureAnyTimePrior": false,
+      "ObservationLongTerm": true,
+      "DemographicsIndexYearMonth": false,
+      "ConditionOccurrenceMediumTerm": false,
+      "longTermStartDays": -365,
+      "DemographicsAge": false,
+      "DrugGroupEraOverlapping": true,
+      "DistinctMeasurementCountLongTerm": false,
+      "MeasurementRangeGroupAnyTimePrior": false,
+      "DistinctConditionCountMediumTerm": false,
+      "DrugGroupEraMediumTerm": false,
+      "ProcedureOccurrenceShortTerm": true,
+      "ObservationMediumTerm": false,
+      "ConditionGroupEraAnyTimePrior": false,
+      "Chads2": true,
+      "DrugExposureAnyTimePrior": false,
+      "DeviceExposureLongTerm": true,
+      "DemographicsTimeInCohort": false,
+      "DistinctMeasurementCountMediumTerm": false,
+      "MeasurementValueShortTerm": false,
+      "DeviceExposureMediumTerm": false,
+      "ConditionGroupEraStartShortTerm": false,
+      "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+      "MeasurementLongTerm": true,
+      "DemographicsIndexYear": true,
+      "MeasurementValueMediumTerm": false,
+      "DrugEraStartMediumTerm": false,
+      "MeasurementValueAnyTimePrior": false,
+      "DistinctObservationCountShortTerm": false,
+      "DrugEraMediumTerm": false,
+      "ConditionGroupEraLongTerm": true,
+      "DrugExposureShortTerm": false,
+      "DistinctIngredientCountShortTerm": false,
+      "DeviceExposureShortTerm": true,
+      "mediumTermStartDays": -180,
+      "DemographicsPostObservationTime": false,
+      "VisitConceptCountLongTerm": false,
+      "VisitConceptCountMediumTerm": false,
+      "excludedCovariateConceptIds": [],
+      "ConditionGroupEraMediumTerm": false,
+      "DrugExposureMediumTerm": false,
+      "DistinctProcedureCountLongTerm": false,
+      "DrugEraAnyTimePrior": false,
+      "endDays": 0,
+      "ConditionOccurrenceShortTerm": false
+    },
+    "riskWindowEnd": 30,
+    "firstExposureOnly": true,
+    "removePeopleWithPriorOutcomes": true
+  },
+  "organizationName": "OHDSI",
+  "description": null,
+  "negativeControlExposureCohortDefinition": {},
+  "version": "CoxibVsNSAIDsReplication",
+  "estimationAnalysisSettings": {
+    "analysisSpecification": {
+      "targetComparatorOutcomes": [{
+        "targetId": 1501,
+        "comparatorId": 1502,
+        "includedCovariateConceptIds": [],
+        "excludedCovariateConceptIds": [
+          1115008,
+          1118084,
+          1124300,
+          1177480
+        ],
+        "outcomeIds": [
+          1503,
+          1504,
+          1505,
+          1506,
+          1507,
+          1508,
+          1509
+        ]
+      }],
+      "cohortMethodAnalysisList": [
+        {
+          "comparatorType": null,
+          "fitOutcomeModel": true,
+          "getDbCohortMethodDataArgs": {
+            "restrictToCommonPeriod": true,
+            "removeDuplicateSubjects": "keep first",
+            "maxCohortSize": 0,
+            "excludeDrugsFromCovariates": false,
+            "covariateSettings": {
+              "VisitCountMediumTerm": false,
+              "ObservationShortTerm": true,
+              "shortTermStartDays": -30,
+              "MeasurementRangeGroupShortTerm": false,
+              "ConditionOccurrenceLongTerm": false,
+              "DrugEraStartLongTerm": false,
+              "VisitCountShortTerm": false,
+              "Chads2Vasc": true,
+              "ConditionGroupEraStartLongTerm": false,
+              "ConditionEraShortTerm": false,
+              "Dcsi": true,
+              "DrugGroupEraLongTerm": true,
+              "DrugGroupEraShortTerm": true,
+              "ConditionEraStartLongTerm": false,
+              "temporal": false,
+              "DemographicsIndexMonth": true,
+              "ConditionOccurrencePrimaryInpatientLongTerm": false,
+              "ConditionEraAnyTimePrior": false,
+              "addDescendantsToInclude": false,
+              "ConditionGroupEraStartMediumTerm": false,
+              "ProcedureOccurrenceLongTerm": true,
+              "DrugExposureLongTerm": false,
+              "DrugEraStartShortTerm": false,
+              "DistinctIngredientCountMediumTerm": false,
+              "DistinctMeasurementCountShortTerm": false,
+              "MeasurementRangeGroupLongTerm": true,
+              "ConditionGroupEraOverlapping": false,
+              "attr_fun": "getDbDefaultCovariateData",
+              "MeasurementRangeGroupMediumTerm": false,
+              "DrugGroupEraStartMediumTerm": false,
+              "MeasurementAnyTimePrior": false,
+              "MeasurementMediumTerm": false,
+              "includedCovariateIds": [],
+              "ConditionOccurrenceAnyTimePrior": false,
+              "DistinctConditionCountLongTerm": false,
+              "MeasurementValueLongTerm": false,
+              "DrugEraShortTerm": false,
+              "DrugGroupEraAnyTimePrior": false,
+              "DrugEraOverlapping": false,
+              "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+              "ConditionEraMediumTerm": false,
+              "ConditionEraOverlapping": false,
+              "ConditionEraStartShortTerm": false,
+              "ObservationAnyTimePrior": false,
+              "VisitConceptCountShortTerm": false,
+              "DemographicsEthnicity": true,
+              "DistinctIngredientCountLongTerm": false,
+              "ConditionOccurrencePrimaryInpatientShortTerm": false,
+              "DemographicsAgeGroup": true,
+              "DistinctProcedureCountShortTerm": false,
+              "DistinctObservationCountMediumTerm": false,
+              "includedCovariateConceptIds": [],
+              "DrugGroupEraStartShortTerm": false,
+              "addDescendantsToExclude": false,
+              "DrugEraLongTerm": false,
+              "DistinctConditionCountShortTerm": false,
+              "ConditionGroupEraShortTerm": true,
+              "ConditionEraStartMediumTerm": false,
+              "VisitCountLongTerm": false,
+              "DemographicsRace": true,
+              "ProcedureOccurrenceAnyTimePrior": false,
+              "DistinctObservationCountLongTerm": false,
+              "ProcedureOccurrenceMediumTerm": false,
+              "attr_class": "covariateSettings",
+              "CharlsonIndex": true,
+              "DemographicsPriorObservationTime": false,
+              "MeasurementShortTerm": true,
+              "DistinctProcedureCountMediumTerm": false,
+              "ConditionEraLongTerm": false,
+              "DrugGroupEraStartLongTerm": false,
+              "DemographicsGender": true,
+              "DeviceExposureAnyTimePrior": false,
+              "ObservationLongTerm": true,
+              "DemographicsIndexYearMonth": false,
+              "ConditionOccurrenceMediumTerm": false,
+              "longTermStartDays": -365,
+              "DemographicsAge": false,
+              "DrugGroupEraOverlapping": true,
+              "DistinctMeasurementCountLongTerm": false,
+              "MeasurementRangeGroupAnyTimePrior": false,
+              "DistinctConditionCountMediumTerm": false,
+              "DrugGroupEraMediumTerm": false,
+              "ProcedureOccurrenceShortTerm": true,
+              "ObservationMediumTerm": false,
+              "ConditionGroupEraAnyTimePrior": false,
+              "Chads2": true,
+              "DrugExposureAnyTimePrior": false,
+              "DeviceExposureLongTerm": true,
+              "DemographicsTimeInCohort": false,
+              "DistinctMeasurementCountMediumTerm": false,
+              "MeasurementValueShortTerm": false,
+              "DeviceExposureMediumTerm": false,
+              "ConditionGroupEraStartShortTerm": false,
+              "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+              "MeasurementLongTerm": true,
+              "DemographicsIndexYear": true,
+              "MeasurementValueMediumTerm": false,
+              "DrugEraStartMediumTerm": false,
+              "MeasurementValueAnyTimePrior": false,
+              "DistinctObservationCountShortTerm": false,
+              "DrugEraMediumTerm": false,
+              "ConditionGroupEraLongTerm": true,
+              "DrugExposureShortTerm": false,
+              "DistinctIngredientCountShortTerm": false,
+              "DeviceExposureShortTerm": true,
+              "mediumTermStartDays": -180,
+              "DemographicsPostObservationTime": false,
+              "VisitConceptCountLongTerm": false,
+              "VisitConceptCountMediumTerm": false,
+              "excludedCovariateConceptIds": [],
+              "ConditionGroupEraMediumTerm": false,
+              "DrugExposureMediumTerm": false,
+              "DistinctProcedureCountLongTerm": false,
+              "DrugEraAnyTimePrior": false,
+              "endDays": 0,
+              "ConditionOccurrenceShortTerm": false
+            },
+            "studyStartDate": null,
+            "washoutPeriod": 0,
+            "firstExposureOnly": false,
+            "attr_class": "args",
+            "studyEndDate": null
+          },
+          "trimByPs": false,
+          "createStudyPopArgs": {
+            "restrictToCommonPeriod": false,
+            "removeDuplicateSubjects": "keep all",
+            "minDaysAtRisk": 1,
+            "addExposureDaysToStart": false,
+            "riskWindowStart": 1,
+            "washoutPeriod": 0,
+            "attr_class": "args",
+            "censorAtNewRiskWindow": true,
+            "addExposureDaysToEnd": false,
+            "priorOutcomeLookback": 180,
+            "removeSubjectsWithPriorOutcome": true,
+            "riskWindowEnd": 30,
+            "firstExposureOnly": false
+          },
+          "description": "No matching, simple outcome model",
+          "trimByPsArgs": {
+            "trimFraction": 0.05,
+            "attr_class": "args"
+          },
+          "targetType": null,
+          "stratifyByPs": false,
+          "attr_class": "cmAnalysis",
+          "stratifyByPsAndCovariates": false,
+          "matchOnPsAndCovariatesArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 1,
+            "covariateIds": [],
+            "attr_class": "args"
+          },
+          "trimByPsToEquipoise": false,
+          "matchOnPs": false,
+          "stratifyByPsAndCovariatesArgs": {
+            "baseSelection": "all",
+            "covariateIds": [],
+            "numberOfStrata": 5,
+            "attr_class": "args"
+          },
+          "matchOnPsArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 1,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "stratifyByPsArgs": {
+            "baseSelection": "all",
+            "numberOfStrata": 5,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "matchOnPsAndCovariates": false,
+          "analysisId": 1,
+          "createPsArgs": {
+            "stopOnError": true,
+            "excludeCovariateIds": [],
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "errorOnHighCorrelation": true,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "silent",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "attr_class": "args",
+            "includeCovariateIds": [],
+            "maxCohortSizeForFitting": 250000
+          },
+          "trimByPsToEquipoiseArgs": {
+            "bounds": [
+              0.25,
+              0.75
+            ],
+            "attr_class": "args"
+          },
+          "fitOutcomeModelArgs": {
+            "excludeCovariateIds": [],
+            "useCovariates": false,
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "inversePtWeighting": false,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "quiet",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "modelType": "cox",
+            "stratified": false,
+            "attr_class": "args",
+            "interactionCovariateIds": [],
+            "includeCovariateIds": []
+          },
+          "createPs": false
+        },
+        {
+          "comparatorType": null,
+          "fitOutcomeModel": true,
+          "getDbCohortMethodDataArgs": {
+            "restrictToCommonPeriod": true,
+            "removeDuplicateSubjects": "keep first",
+            "maxCohortSize": 0,
+            "excludeDrugsFromCovariates": false,
+            "covariateSettings": {
+              "VisitCountMediumTerm": false,
+              "ObservationShortTerm": true,
+              "shortTermStartDays": -30,
+              "MeasurementRangeGroupShortTerm": false,
+              "ConditionOccurrenceLongTerm": false,
+              "DrugEraStartLongTerm": false,
+              "VisitCountShortTerm": false,
+              "Chads2Vasc": true,
+              "ConditionGroupEraStartLongTerm": false,
+              "ConditionEraShortTerm": false,
+              "Dcsi": true,
+              "DrugGroupEraLongTerm": true,
+              "DrugGroupEraShortTerm": true,
+              "ConditionEraStartLongTerm": false,
+              "temporal": false,
+              "DemographicsIndexMonth": true,
+              "ConditionOccurrencePrimaryInpatientLongTerm": false,
+              "ConditionEraAnyTimePrior": false,
+              "addDescendantsToInclude": false,
+              "ConditionGroupEraStartMediumTerm": false,
+              "ProcedureOccurrenceLongTerm": true,
+              "DrugExposureLongTerm": false,
+              "DrugEraStartShortTerm": false,
+              "DistinctIngredientCountMediumTerm": false,
+              "DistinctMeasurementCountShortTerm": false,
+              "MeasurementRangeGroupLongTerm": true,
+              "ConditionGroupEraOverlapping": false,
+              "attr_fun": "getDbDefaultCovariateData",
+              "MeasurementRangeGroupMediumTerm": false,
+              "DrugGroupEraStartMediumTerm": false,
+              "MeasurementAnyTimePrior": false,
+              "MeasurementMediumTerm": false,
+              "includedCovariateIds": [],
+              "ConditionOccurrenceAnyTimePrior": false,
+              "DistinctConditionCountLongTerm": false,
+              "MeasurementValueLongTerm": false,
+              "DrugEraShortTerm": false,
+              "DrugGroupEraAnyTimePrior": false,
+              "DrugEraOverlapping": false,
+              "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+              "ConditionEraMediumTerm": false,
+              "ConditionEraOverlapping": false,
+              "ConditionEraStartShortTerm": false,
+              "ObservationAnyTimePrior": false,
+              "VisitConceptCountShortTerm": false,
+              "DemographicsEthnicity": true,
+              "DistinctIngredientCountLongTerm": false,
+              "ConditionOccurrencePrimaryInpatientShortTerm": false,
+              "DemographicsAgeGroup": true,
+              "DistinctProcedureCountShortTerm": false,
+              "DistinctObservationCountMediumTerm": false,
+              "includedCovariateConceptIds": [],
+              "DrugGroupEraStartShortTerm": false,
+              "addDescendantsToExclude": false,
+              "DrugEraLongTerm": false,
+              "DistinctConditionCountShortTerm": false,
+              "ConditionGroupEraShortTerm": true,
+              "ConditionEraStartMediumTerm": false,
+              "VisitCountLongTerm": false,
+              "DemographicsRace": true,
+              "ProcedureOccurrenceAnyTimePrior": false,
+              "DistinctObservationCountLongTerm": false,
+              "ProcedureOccurrenceMediumTerm": false,
+              "attr_class": "covariateSettings",
+              "CharlsonIndex": true,
+              "DemographicsPriorObservationTime": false,
+              "MeasurementShortTerm": true,
+              "DistinctProcedureCountMediumTerm": false,
+              "ConditionEraLongTerm": false,
+              "DrugGroupEraStartLongTerm": false,
+              "DemographicsGender": true,
+              "DeviceExposureAnyTimePrior": false,
+              "ObservationLongTerm": true,
+              "DemographicsIndexYearMonth": false,
+              "ConditionOccurrenceMediumTerm": false,
+              "longTermStartDays": -365,
+              "DemographicsAge": false,
+              "DrugGroupEraOverlapping": true,
+              "DistinctMeasurementCountLongTerm": false,
+              "MeasurementRangeGroupAnyTimePrior": false,
+              "DistinctConditionCountMediumTerm": false,
+              "DrugGroupEraMediumTerm": false,
+              "ProcedureOccurrenceShortTerm": true,
+              "ObservationMediumTerm": false,
+              "ConditionGroupEraAnyTimePrior": false,
+              "Chads2": true,
+              "DrugExposureAnyTimePrior": false,
+              "DeviceExposureLongTerm": true,
+              "DemographicsTimeInCohort": false,
+              "DistinctMeasurementCountMediumTerm": false,
+              "MeasurementValueShortTerm": false,
+              "DeviceExposureMediumTerm": false,
+              "ConditionGroupEraStartShortTerm": false,
+              "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+              "MeasurementLongTerm": true,
+              "DemographicsIndexYear": true,
+              "MeasurementValueMediumTerm": false,
+              "DrugEraStartMediumTerm": false,
+              "MeasurementValueAnyTimePrior": false,
+              "DistinctObservationCountShortTerm": false,
+              "DrugEraMediumTerm": false,
+              "ConditionGroupEraLongTerm": true,
+              "DrugExposureShortTerm": false,
+              "DistinctIngredientCountShortTerm": false,
+              "DeviceExposureShortTerm": true,
+              "mediumTermStartDays": -180,
+              "DemographicsPostObservationTime": false,
+              "VisitConceptCountLongTerm": false,
+              "VisitConceptCountMediumTerm": false,
+              "excludedCovariateConceptIds": [],
+              "ConditionGroupEraMediumTerm": false,
+              "DrugExposureMediumTerm": false,
+              "DistinctProcedureCountLongTerm": false,
+              "DrugEraAnyTimePrior": false,
+              "endDays": 0,
+              "ConditionOccurrenceShortTerm": false
+            },
+            "studyStartDate": null,
+            "washoutPeriod": 0,
+            "firstExposureOnly": false,
+            "attr_class": "args",
+            "studyEndDate": null
+          },
+          "trimByPs": false,
+          "createStudyPopArgs": {
+            "restrictToCommonPeriod": false,
+            "removeDuplicateSubjects": "keep all",
+            "minDaysAtRisk": 1,
+            "addExposureDaysToStart": false,
+            "riskWindowStart": 1,
+            "washoutPeriod": 0,
+            "attr_class": "args",
+            "censorAtNewRiskWindow": true,
+            "addExposureDaysToEnd": false,
+            "priorOutcomeLookback": 180,
+            "removeSubjectsWithPriorOutcome": true,
+            "riskWindowEnd": 30,
+            "firstExposureOnly": false
+          },
+          "description": "Matching",
+          "trimByPsArgs": {
+            "trimFraction": 0.05,
+            "attr_class": "args"
+          },
+          "targetType": null,
+          "stratifyByPs": false,
+          "attr_class": "cmAnalysis",
+          "stratifyByPsAndCovariates": false,
+          "matchOnPsAndCovariatesArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 1,
+            "covariateIds": [],
+            "attr_class": "args"
+          },
+          "trimByPsToEquipoise": false,
+          "matchOnPs": true,
+          "stratifyByPsAndCovariatesArgs": {
+            "baseSelection": "all",
+            "covariateIds": [],
+            "numberOfStrata": 5,
+            "attr_class": "args"
+          },
+          "matchOnPsArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 10,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "stratifyByPsArgs": {
+            "baseSelection": "all",
+            "numberOfStrata": 5,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "matchOnPsAndCovariates": false,
+          "analysisId": 2,
+          "createPsArgs": {
+            "stopOnError": true,
+            "excludeCovariateIds": [],
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "errorOnHighCorrelation": true,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "silent",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "attr_class": "args",
+            "includeCovariateIds": [],
+            "maxCohortSizeForFitting": 250000
+          },
+          "trimByPsToEquipoiseArgs": {
+            "bounds": [
+              0.25,
+              0.75
+            ],
+            "attr_class": "args"
+          },
+          "fitOutcomeModelArgs": {
+            "excludeCovariateIds": [],
+            "useCovariates": false,
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "inversePtWeighting": false,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "quiet",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "modelType": "cox",
+            "stratified": true,
+            "attr_class": "args",
+            "interactionCovariateIds": [],
+            "includeCovariateIds": []
+          },
+          "createPs": true
+        },
+        {
+          "comparatorType": null,
+          "fitOutcomeModel": true,
+          "getDbCohortMethodDataArgs": {
+            "restrictToCommonPeriod": true,
+            "removeDuplicateSubjects": "keep first",
+            "maxCohortSize": 0,
+            "excludeDrugsFromCovariates": false,
+            "covariateSettings": {
+              "VisitCountMediumTerm": false,
+              "ObservationShortTerm": true,
+              "shortTermStartDays": -30,
+              "MeasurementRangeGroupShortTerm": false,
+              "ConditionOccurrenceLongTerm": false,
+              "DrugEraStartLongTerm": false,
+              "VisitCountShortTerm": false,
+              "Chads2Vasc": true,
+              "ConditionGroupEraStartLongTerm": false,
+              "ConditionEraShortTerm": false,
+              "Dcsi": true,
+              "DrugGroupEraLongTerm": true,
+              "DrugGroupEraShortTerm": true,
+              "ConditionEraStartLongTerm": false,
+              "temporal": false,
+              "DemographicsIndexMonth": true,
+              "ConditionOccurrencePrimaryInpatientLongTerm": false,
+              "ConditionEraAnyTimePrior": false,
+              "addDescendantsToInclude": false,
+              "ConditionGroupEraStartMediumTerm": false,
+              "ProcedureOccurrenceLongTerm": true,
+              "DrugExposureLongTerm": false,
+              "DrugEraStartShortTerm": false,
+              "DistinctIngredientCountMediumTerm": false,
+              "DistinctMeasurementCountShortTerm": false,
+              "MeasurementRangeGroupLongTerm": true,
+              "ConditionGroupEraOverlapping": false,
+              "attr_fun": "getDbDefaultCovariateData",
+              "MeasurementRangeGroupMediumTerm": false,
+              "DrugGroupEraStartMediumTerm": false,
+              "MeasurementAnyTimePrior": false,
+              "MeasurementMediumTerm": false,
+              "includedCovariateIds": [],
+              "ConditionOccurrenceAnyTimePrior": false,
+              "DistinctConditionCountLongTerm": false,
+              "MeasurementValueLongTerm": false,
+              "DrugEraShortTerm": false,
+              "DrugGroupEraAnyTimePrior": false,
+              "DrugEraOverlapping": false,
+              "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+              "ConditionEraMediumTerm": false,
+              "ConditionEraOverlapping": false,
+              "ConditionEraStartShortTerm": false,
+              "ObservationAnyTimePrior": false,
+              "VisitConceptCountShortTerm": false,
+              "DemographicsEthnicity": true,
+              "DistinctIngredientCountLongTerm": false,
+              "ConditionOccurrencePrimaryInpatientShortTerm": false,
+              "DemographicsAgeGroup": true,
+              "DistinctProcedureCountShortTerm": false,
+              "DistinctObservationCountMediumTerm": false,
+              "includedCovariateConceptIds": [],
+              "DrugGroupEraStartShortTerm": false,
+              "addDescendantsToExclude": false,
+              "DrugEraLongTerm": false,
+              "DistinctConditionCountShortTerm": false,
+              "ConditionGroupEraShortTerm": true,
+              "ConditionEraStartMediumTerm": false,
+              "VisitCountLongTerm": false,
+              "DemographicsRace": true,
+              "ProcedureOccurrenceAnyTimePrior": false,
+              "DistinctObservationCountLongTerm": false,
+              "ProcedureOccurrenceMediumTerm": false,
+              "attr_class": "covariateSettings",
+              "CharlsonIndex": true,
+              "DemographicsPriorObservationTime": false,
+              "MeasurementShortTerm": true,
+              "DistinctProcedureCountMediumTerm": false,
+              "ConditionEraLongTerm": false,
+              "DrugGroupEraStartLongTerm": false,
+              "DemographicsGender": true,
+              "DeviceExposureAnyTimePrior": false,
+              "ObservationLongTerm": true,
+              "DemographicsIndexYearMonth": false,
+              "ConditionOccurrenceMediumTerm": false,
+              "longTermStartDays": -365,
+              "DemographicsAge": false,
+              "DrugGroupEraOverlapping": true,
+              "DistinctMeasurementCountLongTerm": false,
+              "MeasurementRangeGroupAnyTimePrior": false,
+              "DistinctConditionCountMediumTerm": false,
+              "DrugGroupEraMediumTerm": false,
+              "ProcedureOccurrenceShortTerm": true,
+              "ObservationMediumTerm": false,
+              "ConditionGroupEraAnyTimePrior": false,
+              "Chads2": true,
+              "DrugExposureAnyTimePrior": false,
+              "DeviceExposureLongTerm": true,
+              "DemographicsTimeInCohort": false,
+              "DistinctMeasurementCountMediumTerm": false,
+              "MeasurementValueShortTerm": false,
+              "DeviceExposureMediumTerm": false,
+              "ConditionGroupEraStartShortTerm": false,
+              "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+              "MeasurementLongTerm": true,
+              "DemographicsIndexYear": true,
+              "MeasurementValueMediumTerm": false,
+              "DrugEraStartMediumTerm": false,
+              "MeasurementValueAnyTimePrior": false,
+              "DistinctObservationCountShortTerm": false,
+              "DrugEraMediumTerm": false,
+              "ConditionGroupEraLongTerm": true,
+              "DrugExposureShortTerm": false,
+              "DistinctIngredientCountShortTerm": false,
+              "DeviceExposureShortTerm": true,
+              "mediumTermStartDays": -180,
+              "DemographicsPostObservationTime": false,
+              "VisitConceptCountLongTerm": false,
+              "VisitConceptCountMediumTerm": false,
+              "excludedCovariateConceptIds": [],
+              "ConditionGroupEraMediumTerm": false,
+              "DrugExposureMediumTerm": false,
+              "DistinctProcedureCountLongTerm": false,
+              "DrugEraAnyTimePrior": false,
+              "endDays": 0,
+              "ConditionOccurrenceShortTerm": false
+            },
+            "studyStartDate": null,
+            "washoutPeriod": 0,
+            "firstExposureOnly": false,
+            "attr_class": "args",
+            "studyEndDate": null
+          },
+          "trimByPs": false,
+          "createStudyPopArgs": {
+            "restrictToCommonPeriod": false,
+            "removeDuplicateSubjects": "keep all",
+            "minDaysAtRisk": 1,
+            "addExposureDaysToStart": false,
+            "riskWindowStart": 1,
+            "washoutPeriod": 0,
+            "attr_class": "args",
+            "censorAtNewRiskWindow": true,
+            "addExposureDaysToEnd": false,
+            "priorOutcomeLookback": 180,
+            "removeSubjectsWithPriorOutcome": true,
+            "riskWindowEnd": 30,
+            "firstExposureOnly": false
+          },
+          "description": "Stratification",
+          "trimByPsArgs": {
+            "trimFraction": 0.05,
+            "attr_class": "args"
+          },
+          "targetType": null,
+          "stratifyByPs": true,
+          "attr_class": "cmAnalysis",
+          "stratifyByPsAndCovariates": false,
+          "matchOnPsAndCovariatesArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 1,
+            "covariateIds": [],
+            "attr_class": "args"
+          },
+          "trimByPsToEquipoise": false,
+          "matchOnPs": false,
+          "stratifyByPsAndCovariatesArgs": {
+            "baseSelection": "all",
+            "covariateIds": [],
+            "numberOfStrata": 5,
+            "attr_class": "args"
+          },
+          "matchOnPsArgs": {
+            "caliper": 0.2,
+            "caliperScale": "standardized logit",
+            "maxRatio": 1,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "stratifyByPsArgs": {
+            "baseSelection": "all",
+            "numberOfStrata": 10,
+            "stratificationColumns": [],
+            "attr_class": "args"
+          },
+          "matchOnPsAndCovariates": false,
+          "analysisId": 3,
+          "createPsArgs": {
+            "stopOnError": true,
+            "excludeCovariateIds": [],
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "errorOnHighCorrelation": true,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "silent",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "attr_class": "args",
+            "includeCovariateIds": [],
+            "maxCohortSizeForFitting": 250000
+          },
+          "trimByPsToEquipoiseArgs": {
+            "bounds": [
+              0.25,
+              0.75
+            ],
+            "attr_class": "args"
+          },
+          "fitOutcomeModelArgs": {
+            "excludeCovariateIds": [],
+            "useCovariates": false,
+            "prior": {
+              "variance": 1,
+              "useCrossValidation": true,
+              "priorType": "laplace",
+              "exclude": 0,
+              "neighborhood": null,
+              "attr_class": "cyclopsPrior",
+              "forceIntercept": false,
+              "graph": null
+            },
+            "inversePtWeighting": false,
+            "control": {
+              "maxIterations": 1000,
+              "autoSearch": true,
+              "seed": null,
+              "initialBound": 2,
+              "gridSteps": 10,
+              "startingVariance": -1,
+              "useKKTSwindle": false,
+              "lowerLimit": 0.01,
+              "cvRepetitions": 10,
+              "attr_class": "cyclopsControl",
+              "noiseLevel": "quiet",
+              "fold": 10,
+              "minCVData": 100,
+              "resetCoefficients": false,
+              "upperLimit": 20,
+              "cvType": "auto",
+              "selectorType": "auto",
+              "convergenceType": "gradient",
+              "tuneSwindle": 10,
+              "maxBoundCount": 5,
+              "tolerance": 1.0E-6,
+              "algorithm": "ccd"
+            },
+            "modelType": "cox",
+            "stratified": true,
+            "attr_class": "args",
+            "interactionCovariateIds": [],
+            "includeCovariateIds": []
+          },
+          "createPs": true
+        }
+      ]
+    },
+    "estimationType": "ComparativeCohortAnalysis"
+  },
+  "skeletonVersion": "v0.0.1",
+  "negativeControlOutcomeCohortDefinition": {
+    "detectOnDescendants": true,
+    "domains": ["condition"],
+    "occurrenceType": "all"
+  },
+  "createdDate": null,
+  "conceptSetCrossReference": [
+    {
+      "targetName": "negativeControlOutcomes",
+      "conceptSetId": 63,
+      "propertyName": "outcomeId",
+      "targetIndex": 0
+    },
+    {
+      "targetName": "estimationAnalysisSettings.analysisSpecification.targetComparatorOutcomes",
+      "conceptSetId": 65,
+      "propertyName": "excludedCovariateConceptIds",
+      "targetIndex": 0
+    }
+  ],
+  "createdBy": null,
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 1118084,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "140587",
+              "VOCABULARY_ID": "RxNorm",
+              "CONCEPT_NAME": "celecoxib",
+              "DOMAIN_ID": "Drug",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Ingredient",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "celecoxib",
+          "id": 0
+        }],
+        "EndStrategy": {"CustomEra": {
+          "DrugCodesetId": 0,
+          "GapDays": 30,
+          "Offset": 0
+        }},
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": null,
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"DrugEra": {
+            "EraStartDate": null,
+            "CorrelatedCriteria": null,
+            "OccurrenceCount": null,
+            "AgeAtStart": null,
+            "GapDays": null,
+            "CodesetId": 0,
+            "AgeAtEnd": null,
+            "First": true,
+            "Gender": null,
+            "EraLength": null,
+            "EraEndDate": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 183
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:45:52.447+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]Treatment",
+      "modifiedDate": "2019-02-22T09:55:04.257+0900",
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1501
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 1115008,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "7258",
+                "VOCABULARY_ID": "RxNorm",
+                "CONCEPT_NAME": "Naproxen",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 1124300,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "3355",
+                "VOCABULARY_ID": "RxNorm",
+                "CONCEPT_NAME": "Diclofenac",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 1177480,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "5640",
+                "VOCABULARY_ID": "RxNorm",
+                "CONCEPT_NAME": "Ibuprofen",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "non-selective NSAID",
+          "id": 0
+        }],
+        "EndStrategy": {"CustomEra": {
+          "DrugCodesetId": 0,
+          "GapDays": 30,
+          "Offset": 0
+        }},
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": null,
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"DrugEra": {
+            "EraStartDate": null,
+            "CorrelatedCriteria": null,
+            "OccurrenceCount": null,
+            "AgeAtStart": null,
+            "GapDays": null,
+            "CodesetId": 0,
+            "AgeAtEnd": null,
+            "First": true,
+            "Gender": null,
+            "EraLength": null,
+            "EraEndDate": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 183
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:50:09.633+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]Comparator",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1502
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Unknown",
+              "CONCEPT_ID": 4242411,
+              "STANDARD_CONCEPT": null,
+              "CONCEPT_CODE": "58574008",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Acute nephropathy",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Unknown",
+              "CONCEPT_CLASS_ID": null,
+              "INVALID_REASON": null
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "acute nephropathy",
+          "id": 0
+        }],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 30,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": null
+            },
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:51:50.953+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]AcuteRenalFailure",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1503
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Unknown",
+              "CONCEPT_ID": 432791,
+              "STANDARD_CONCEPT": null,
+              "CONCEPT_CODE": "41291007",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Angioedema",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Unknown",
+              "CONCEPT_CLASS_ID": null,
+              "INVALID_REASON": null
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Angioedema",
+          "id": 0
+        }],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 30,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": null
+            },
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:53:03.037+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]Angioedema",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1504
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 40796722,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "LP44699-4",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Alanine Aminotransferase | Bld-Ser-Plas",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 40787003,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "LP45656-3",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Aspartate Aminotransferase | Bld-Ser-Plas",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "aminotransferase",
+            "id": 0
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 40796605,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LP43561-7",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Bilirubin | Bld-Ser-Plas",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "bilirubin",
+            "id": 1
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 40777013,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LP45609-2",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Alkaline Phosphatase | Bld-Ser-Plas",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Alkaline phosphatase",
+            "id": 2
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 194087,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "235862008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Hepatitis due to infection",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "viral hepatitis",
+            "id": 3
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4352876,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "243978007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Liver damage",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "liver damage",
+            "id": 4
+          }
+        ],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": 30,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 30,
+                  "Coeff": 1
+                },
+                "UseIndexEnd": null
+              },
+              "EndWindow": null,
+              "Criteria": {"Measurement": {
+                "Operator": null,
+                "RangeHigh": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 0
+                },
+                "MeasurementTypeExclude": false,
+                "ValueAsConcept": null,
+                "CorrelatedCriteria": null,
+                "RangeHighRatio": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 2
+                },
+                "CodesetId": 1,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "Unit": null,
+                "RangeLowRatio": null,
+                "MeasurementType": null,
+                "MeasurementSourceConcept": null,
+                "VisitType": null,
+                "ValueAsNumber": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 0
+                },
+                "First": null,
+                "OccurrenceStartDate": null,
+                "RangeLow": null,
+                "Abnormal": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 2,
+                "IsDistinct": false,
+                "Count": 1
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 30,
+                  "Coeff": 1
+                },
+                "UseIndexEnd": null
+              },
+              "EndWindow": null,
+              "Criteria": {"ConditionOccurrence": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "ConditionTypeExclude": false,
+                "CodesetId": 3,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "ConditionType": null,
+                "ConditionSourceConcept": null,
+                "StopReason": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 1,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 30,
+                  "Coeff": 1
+                },
+                "UseIndexEnd": null
+              },
+              "EndWindow": null,
+              "Criteria": {"Measurement": {
+                "Operator": null,
+                "RangeHigh": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 0
+                },
+                "MeasurementTypeExclude": false,
+                "ValueAsConcept": null,
+                "CorrelatedCriteria": null,
+                "RangeHighRatio": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 2
+                },
+                "CodesetId": 2,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "Unit": null,
+                "RangeLowRatio": null,
+                "MeasurementType": null,
+                "MeasurementSourceConcept": null,
+                "VisitType": null,
+                "ValueAsNumber": {
+                  "Op": "gt",
+                  "Extent": null,
+                  "Value": 0
+                },
+                "First": null,
+                "OccurrenceStartDate": null,
+                "RangeLow": null,
+                "Abnormal": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 1,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            },
+            {
+              "RestrictVisit": false,
+              "StartWindow": {
+                "UseEventEnd": false,
+                "Start": {
+                  "Days": null,
+                  "Coeff": -1
+                },
+                "End": {
+                  "Days": 1,
+                  "Coeff": -1
+                },
+                "UseIndexEnd": null
+              },
+              "EndWindow": null,
+              "Criteria": {"ConditionOccurrence": {
+                "OccurrenceEndDate": null,
+                "CorrelatedCriteria": null,
+                "ConditionTypeExclude": false,
+                "CodesetId": 4,
+                "ProviderSpecialty": null,
+                "Gender": null,
+                "VisitType": null,
+                "First": null,
+                "OccurrenceStartDate": null,
+                "ConditionType": null,
+                "ConditionSourceConcept": null,
+                "StopReason": null,
+                "Age": null
+              }},
+              "Occurrence": {
+                "Type": 1,
+                "IsDistinct": false,
+                "Count": 0
+              }
+            }
+          ],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"Measurement": {
+            "Operator": null,
+            "RangeHigh": {
+              "Op": "gt",
+              "Extent": null,
+              "Value": 0
+            },
+            "MeasurementTypeExclude": false,
+            "ValueAsConcept": null,
+            "CorrelatedCriteria": null,
+            "RangeHighRatio": {
+              "Op": "gt",
+              "Extent": null,
+              "Value": 3
+            },
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "Unit": null,
+            "RangeLowRatio": null,
+            "MeasurementType": null,
+            "MeasurementSourceConcept": null,
+            "VisitType": null,
+            "ValueAsNumber": {
+              "Op": "gt",
+              "Extent": null,
+              "Value": 0
+            },
+            "First": null,
+            "OccurrenceStartDate": null,
+            "RangeLow": null,
+            "Abnormal": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:53:29.397+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]DrugInducedLiverInjury",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1505
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4280942,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "66636001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Acute gastrojejunal ulcer with perforation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 28779,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "17709002",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Bleeding esophageal varices",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 198798,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "109558001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Dieulafoy's vascular malformation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4112183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "195475003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Esophageal varices with bleeding, associated with another disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 194382,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "23913003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "External hemorrhoids",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 192671,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "74474003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Gastrointestinal hemorrhage",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 196436,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "90458007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Internal hemorrhoids",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4338225,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "88169003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Peptic ulcer with perforation",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Gastrointestinal hemorrhage",
+          "id": 0
+        }],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 30,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": null
+            },
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:56:58.323+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]GiHemorrhage",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1506
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 312927,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "49584005",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Acute cor pulmonale",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 312338,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "77737007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Benign hypertensive heart disease with congestive heart failure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 315295,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "82523003",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Congestive rheumatic heart failure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 316139,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "84114007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Heart failure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 195556,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "86234004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Hypertensive heart AND renal disease",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 314378,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "5148006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Hypertensive heart disease with congestive heart failure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 316994,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "83105008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Malignant hypertensive heart disease with congestive heart failure",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "heart failure",
+          "id": 0
+        }],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 90,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": null
+            },
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:57:27.887+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]HeartFailure",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1507
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 4329847,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "22298006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Myocardial infarction",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 314666,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "1755008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Old myocardial infarction",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Acute MI",
+            "id": 0
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 321318,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "194828000",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Angina pectoris",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 316995,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "63739005",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Coronary occlusion",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 4329847,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "22298006",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Myocardial infarction",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 314666,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "1755008",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Old myocardial infarction",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 315296,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "4557003",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Preinfarction syndrome",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "AMI + ICH",
+            "id": 1
+          }
+        ],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [],
+          "Type": "ANY",
+          "DemographicCriteriaList": [],
+          "Groups": [
+            {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": null
+                  },
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 0,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9203,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "ER",
+                        "VOCABULARY_ID": "Visit",
+                        "CONCEPT_NAME": "Emergency Room Visit",
+                        "DOMAIN_ID": "Visit",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9201,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "IP",
+                        "VOCABULARY_ID": "Visit",
+                        "CONCEPT_NAME": "Inpatient Visit",
+                        "DOMAIN_ID": "Visit",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 38000183,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "OMOP generated",
+                        "VOCABULARY_ID": "Condition Type",
+                        "CONCEPT_NAME": "Inpatient detail - primary",
+                        "DOMAIN_ID": "Condition Type",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 38000199,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "OMOP generated",
+                        "VOCABULARY_ID": "Condition Type",
+                        "CONCEPT_NAME": "Inpatient header - primary",
+                        "DOMAIN_ID": "Condition Type",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 44786627,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "OMOP generated",
+                        "VOCABULARY_ID": "Condition Type",
+                        "CONCEPT_NAME": "Primary Condition",
+                        "DOMAIN_ID": "Condition Type",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 38000184,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "OMOP generated",
+                        "VOCABULARY_ID": "Condition Type",
+                        "CONCEPT_NAME": "Inpatient detail - 1st position",
+                        "DOMAIN_ID": "Condition Type",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 38000200,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "OMOP generated",
+                        "VOCABULARY_ID": "Condition Type",
+                        "CONCEPT_NAME": "Inpatient header - 1st position",
+                        "DOMAIN_ID": "Condition Type",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "ConditionSourceConcept": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 30,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": null
+                  },
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 0,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 1,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": null
+                  },
+                  "EndWindow": null,
+                  "Criteria": {"Death": {
+                    "CorrelatedCriteria": null,
+                    "CodesetId": null,
+                    "DeathSourceConcept": null,
+                    "DeathTypeExclude": false,
+                    "DeathType": null,
+                    "OccurrenceStartDate": null,
+                    "Gender": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": 1
+                    },
+                    "UseIndexEnd": null
+                  },
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 1,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": [
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9203,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "ER",
+                        "VOCABULARY_ID": "Visit",
+                        "CONCEPT_NAME": "Emergency Room Visit",
+                        "DOMAIN_ID": "Visit",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      },
+                      {
+                        "INVALID_REASON_CAPTION": "Unknown",
+                        "CONCEPT_ID": 9201,
+                        "STANDARD_CONCEPT": null,
+                        "CONCEPT_CODE": "IP",
+                        "VOCABULARY_ID": "Visit",
+                        "CONCEPT_NAME": "Inpatient Visit",
+                        "DOMAIN_ID": "Visit",
+                        "STANDARD_CONCEPT_CAPTION": "Unknown",
+                        "CONCEPT_CLASS_ID": null,
+                        "INVALID_REASON": null
+                      }
+                    ],
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 2,
+                    "IsDistinct": false,
+                    "Count": 1
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            }
+          ],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [
+            {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": [
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 9203,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "ER",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Emergency Room Visit",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 9201,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "IP",
+                  "VOCABULARY_ID": "Visit",
+                  "CONCEPT_NAME": "Inpatient Visit",
+                  "DOMAIN_ID": "Visit",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                }
+              ],
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": [
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38000183,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "OMOP generated",
+                  "VOCABULARY_ID": "Condition Type",
+                  "CONCEPT_NAME": "Inpatient detail - primary",
+                  "DOMAIN_ID": "Condition Type",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38000199,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "OMOP generated",
+                  "VOCABULARY_ID": "Condition Type",
+                  "CONCEPT_NAME": "Inpatient header - primary",
+                  "DOMAIN_ID": "Condition Type",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 44786627,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "OMOP generated",
+                  "VOCABULARY_ID": "Condition Type",
+                  "CONCEPT_NAME": "Primary Condition",
+                  "DOMAIN_ID": "Condition Type",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38000184,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "OMOP generated",
+                  "VOCABULARY_ID": "Condition Type",
+                  "CONCEPT_NAME": "Inpatient detail - 1st position",
+                  "DOMAIN_ID": "Condition Type",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                },
+                {
+                  "INVALID_REASON_CAPTION": "Unknown",
+                  "CONCEPT_ID": 38000200,
+                  "STANDARD_CONCEPT": null,
+                  "CONCEPT_CODE": "OMOP generated",
+                  "VOCABULARY_ID": "Condition Type",
+                  "CONCEPT_NAME": "Inpatient header - 1st position",
+                  "DOMAIN_ID": "Condition Type",
+                  "STANDARD_CONCEPT_CAPTION": "Unknown",
+                  "CONCEPT_CLASS_ID": null,
+                  "INVALID_REASON": null
+                }
+              ],
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            {"Death": {
+              "CorrelatedCriteria": null,
+              "CodesetId": null,
+              "DeathSourceConcept": null,
+              "DeathTypeExclude": false,
+              "DeathType": null,
+              "OccurrenceStartDate": null,
+              "Gender": null,
+              "Age": null
+            }}
+          ],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:58:32.930+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]MiAndIschemicDeath",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1508
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4329847,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "22298006",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Myocardial infarction",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 314666,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "1755008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Old myocardial infarction",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "Acute MI",
+          "id": 0
+        }],
+        "EndStrategy": null,
+        "CensoringCriteria": [],
+        "Title": null,
+        "AdditionalCriteria": {
+          "CriteriaList": [{
+            "RestrictVisit": false,
+            "StartWindow": {
+              "UseEventEnd": false,
+              "Start": {
+                "Days": 90,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 1,
+                "Coeff": -1
+              },
+              "UseIndexEnd": null
+            },
+            "EndWindow": null,
+            "Criteria": {"ConditionOccurrence": {
+              "OccurrenceEndDate": null,
+              "CorrelatedCriteria": null,
+              "ConditionTypeExclude": false,
+              "CodesetId": 0,
+              "ProviderSpecialty": null,
+              "Gender": null,
+              "VisitType": null,
+              "First": null,
+              "OccurrenceStartDate": null,
+              "ConditionType": null,
+              "ConditionSourceConcept": null,
+              "StopReason": null,
+              "Age": null
+            }},
+            "Occurrence": {
+              "Type": 1,
+              "IsDistinct": false,
+              "Count": 0
+            }
+          }],
+          "Type": "ALL",
+          "DemographicCriteriaList": [],
+          "Groups": [],
+          "Count": null
+        },
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9203,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "ER",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Emergency Room Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9201,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "IP",
+                "VOCABULARY_ID": "Visit",
+                "CONCEPT_NAME": "Inpatient Visit",
+                "DOMAIN_ID": "Visit",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "First": null,
+            "OccurrenceStartDate": null,
+            "ConditionType": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000183,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000199,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - primary",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 44786627,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Primary Condition",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000184,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient detail - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 38000200,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "OMOP generated",
+                "VOCABULARY_ID": "Condition Type",
+                "CONCEPT_NAME": "Inpatient header - 1st position",
+                "DOMAIN_ID": "Condition Type",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "ConditionSourceConcept": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": "2019-02-22T09:59:01.043+0900",
+      "createdBy": null,
+      "name": "[CoxibVsNSAIDs]MyocardialInfarction",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": "SIMPLE_EXPRESSION",
+      "modifiedBy": null,
+      "id": 1509
+    }
+  ],
+  "name": "CoxibVsNSAIDsReplication",
+  "modifiedDate": null,
+  "modifiedBy": null,
+  "conceptSets": [
+    {
+      "expression": {"items": []},
+      "name": "Coxib negative control",
+      "id": 63
+    },
+    {
+      "expression": {"items": [
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 1118084,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "140587",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "celecoxib",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 1124300,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "3355",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "Diclofenac",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 1177480,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "5640",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "Ibuprofen",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        },
+        {
+          "isExcluded": false,
+          "concept": {
+            "INVALID_REASON_CAPTION": "Valid",
+            "CONCEPT_ID": 1115008,
+            "STANDARD_CONCEPT": "S",
+            "CONCEPT_CODE": "7258",
+            "VOCABULARY_ID": "RxNorm",
+            "CONCEPT_NAME": "Naproxen",
+            "DOMAIN_ID": "Drug",
+            "STANDARD_CONCEPT_CAPTION": "Standard",
+            "CONCEPT_CLASS_ID": "Ingredient",
+            "INVALID_REASON": "V"
+          },
+          "includeMapped": false,
+          "includeDescendants": false
+        }
+      ]},
+      "name": "NSAIDs and Celecoxib",
+      "id": 65
+    }
+  ],
+  "doPositiveControlSynthesis": false,
+  "id": 54,
+  "packageName": "CoxibVsNSAIDs",
+  "negativeControls": []
+}
