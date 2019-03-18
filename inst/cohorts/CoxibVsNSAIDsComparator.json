@@ -1,98 +1,149 @@
 {
-  "ExpressionLimit": {"Type": "First"},
+  "ConceptSets": [
+    {
+      "id": 0,
+      "name": "non-selective NSAID",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": 1115008,
+              "CONCEPT_NAME": "Naproxen",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "7258",
+              "DOMAIN_ID": "Drug",
+              "VOCABULARY_ID": "RxNorm",
+              "CONCEPT_CLASS_ID": "Ingredient"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 1124300,
+              "CONCEPT_NAME": "Diclofenac",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "3355",
+              "DOMAIN_ID": "Drug",
+              "VOCABULARY_ID": "RxNorm",
+              "CONCEPT_CLASS_ID": "Ingredient"
+            },
+            "includeDescendants": true
+          },
+          {
+            "concept": {
+              "CONCEPT_ID": 1177480,
+              "CONCEPT_NAME": "Ibuprofen",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "5640",
+              "DOMAIN_ID": "Drug",
+              "VOCABULARY_ID": "RxNorm",
+              "CONCEPT_CLASS_ID": "Ingredient"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "osteoarthritis",
+      "expression": {
+        "items": [
+          {
+            "concept": {
+              "CONCEPT_ID": 80180,
+              "CONCEPT_NAME": "Osteoarthritis",
+              "STANDARD_CONCEPT": "S",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "INVALID_REASON": "V",
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_CODE": "396275006",
+              "DOMAIN_ID": "Condition",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_CLASS_ID": "Clinical Finding"
+            },
+            "includeDescendants": true
+          }
+        ]
+      }
+    }
+  ],
+  "PrimaryCriteria": {
+    "CriteriaList": [
+      {
+        "DrugEra": {
+          "CodesetId": 0,
+          "First": true
+        }
+      }
+    ],
+    "ObservationWindow": {
+      "PriorDays": 183,
+      "PostDays": 0
+    },
+    "PrimaryCriteriaLimit": {
+      "Type": "First"
+    }
+  },
+  "QualifiedLimit": {
+    "Type": "First"
+  },
+  "ExpressionLimit": {
+    "Type": "First"
+  },
+  "InclusionRules": [
+    {
+      "name": "osteoarthritis",
+      "expression": {
+        "Type": "ALL",
+        "CriteriaList": [
+          {
+            "Criteria": {
+              "ConditionOccurrence": {
+                "CodesetId": 1
+              }
+            },
+            "StartWindow": {
+              "Start": {
+                "Days": 365,
+                "Coeff": -1
+              },
+              "End": {
+                "Days": 0,
+                "Coeff": 1
+              }
+            },
+            "Occurrence": {
+              "Type": 2,
+              "Count": 1
+            }
+          }
+        ],
+        "DemographicCriteriaList": [],
+        "Groups": []
+      }
+    }
+  ],
+  "EndStrategy": {
+    "CustomEra": {
+      "DrugCodesetId": 0,
+      "GapDays": 30,
+      "Offset": 0
+    }
+  },
+  "CensoringCriteria": [],
   "CollapseSettings": {
     "CollapseType": "ERA",
     "EraPad": 0
   },
-  "CensorWindow": {
-    "StartDate": null,
-    "EndDate": null
-  },
-  "ConceptSets": [{
-    "expression": {"items": [
-      {
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1115008,
-          "STANDARD_CONCEPT": null,
-          "CONCEPT_CODE": "7258",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Naproxen",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Unknown",
-          "CONCEPT_CLASS_ID": null,
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": true
-      },
-      {
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1124300,
-          "STANDARD_CONCEPT": null,
-          "CONCEPT_CODE": "3355",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Diclofenac",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Unknown",
-          "CONCEPT_CLASS_ID": null,
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": true
-      },
-      {
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1177480,
-          "STANDARD_CONCEPT": null,
-          "CONCEPT_CODE": "5640",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "Ibuprofen",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Unknown",
-          "CONCEPT_CLASS_ID": null,
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": true
-      }
-    ]},
-    "name": "non-selective NSAID",
-    "id": 0
-  }],
-  "EndStrategy": {"CustomEra": {
-    "DrugCodesetId": 0,
-    "GapDays": 30,
-    "Offset": 0
-  }},
-  "CensoringCriteria": [],
-  "Title": null,
-  "AdditionalCriteria": null,
-  "QualifiedLimit": {"Type": "First"},
-  "InclusionRules": [],
-  "PrimaryCriteria": {
-    "CriteriaList": [{"DrugEra": {
-      "EraStartDate": null,
-      "CorrelatedCriteria": null,
-      "OccurrenceCount": null,
-      "AgeAtStart": null,
-      "GapDays": null,
-      "CodesetId": 0,
-      "AgeAtEnd": null,
-      "First": true,
-      "Gender": null,
-      "EraLength": null,
-      "EraEndDate": null
-    }}],
-    "PrimaryCriteriaLimit": {"Type": "First"},
-    "ObservationWindow": {
-      "PostDays": 0,
-      "PriorDays": 183
-    }
-  }
+  "CensorWindow": {}
 }
